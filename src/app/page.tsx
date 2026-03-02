@@ -326,7 +326,7 @@ export default function Home() {
             {/* 朝焼けの大阪空撮画像 */}
             <div className="stagger-card mx-auto mb-10 max-w-md overflow-hidden rounded-xl">
               <Image
-                src="/images/daily-flow.png"
+                src="/keikamotsu-hp/images/daily-flow.png"
                 alt="朝焼けの大阪の街を走る軽バン"
                 width={1104}
                 height={824}
