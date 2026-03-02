@@ -177,7 +177,7 @@ export default function RootLayout({
 
         {/* 背景画像 — 画面下に固定、フッターの裏に隠れている */}
         <div className="fixed bottom-0 left-0 right-0 -z-10 h-[60vh] md:h-[70vh]">
-          <div className="absolute inset-0 bg-[url('/images/footer-bg.png')] bg-cover bg-center" />
+          <div className="absolute inset-0 bg-[url('/keikamotsu-hp/images/footer-bg.png')] bg-cover bg-center" />
           <div className="absolute inset-0 bg-black/30" />
           <p className="absolute inset-0 flex items-center justify-center font-[family-name:var(--font-handwriting)] text-2xl tracking-widest text-white/80 md:text-4xl">
             あなたの道は、ここから始まる。
