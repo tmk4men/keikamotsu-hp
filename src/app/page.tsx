@@ -414,6 +414,7 @@ export default function Home() {
                   prev: "飲食業から転職",
                   text: "前職は飲食業で、毎日深夜まで働いていました。運転は好きだったけど、未経験で不安だらけ。でも研修で先輩がずっと横にいてくれたおかげで、2週間で自信がつきました。今では自分のペースで稼げるこの仕事が本当に気に入っています。",
                   highlight: "研修で自信がつきました",
+                  from: "left" as const,
                 },
                 {
                   name: "Mさん",
@@ -421,6 +422,7 @@ export default function Home() {
                   prev: "Wワークから正社員へ",
                   text: "最初は副業として業務委託で始めました。「合わなかったらやめよう」くらいの気持ちで。でも働いてみたら居心地がよくて、半年後に正社員に。今は家族との時間も増えて、転職して本当によかったと思います。",
                   highlight: "家族との時間も増えました",
+                  from: "right" as const,
                 },
                 {
                   name: "Kさん",
@@ -428,12 +430,19 @@ export default function Home() {
                   prev: "フリーターから正社員へ",
                   text: "正直、学歴に自信がなくて就活がうまくいかなかった。でもここは学歴不問で、やる気だけを見てくれました。今では月収30万以上。「がんばった分だけ返ってくる」って、本当だったんだなって実感しています。",
                   highlight: "やる気だけを見てくれました",
+                  from: "left" as const,
                 },
-              ].map((voice) => (
-                <div key={voice.name} className="stagger-card rounded-xl border border-gray-200 bg-white p-6">
+              ].map((voice, i) => (
+                <div
+                  key={voice.name}
+                  className={`speech-bubble rounded-xl border border-gray-200 bg-white p-6 ${
+                    voice.from === "left" ? "slide-from-left" : "slide-from-right"
+                  }`}
+                  style={{ transitionDelay: `${i * 0.15}s` }}
+                >
                   {/* プロフィール */}
                   <div className="mb-4 flex items-center gap-3">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-light">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-light">
                       <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-brand"><path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clipRule="evenodd" /></svg>
                     </div>
                     <div>

@@ -25,11 +25,11 @@ export default function DrivingTruck() {
   return (
     <div
       ref={containerRef}
-      className="relative mt-auto h-36 w-full overflow-hidden md:h-44"
+      className="relative mt-auto h-48 w-full overflow-hidden md:h-44"
     >
       {/* テキスト - トラックの後ろから出現 */}
       <p
-        className={`font-handwriting absolute bottom-12 left-2 text-xl tracking-widest text-white/90 md:bottom-[5.5rem] md:left-4 md:text-3xl ${
+        className={`font-handwriting absolute bottom-[7rem] left-2 text-xl tracking-widest text-white/90 md:bottom-[5.5rem] md:left-4 md:text-3xl ${
           ready ? "text-behind-truck" : "opacity-0"
         }`}
       >

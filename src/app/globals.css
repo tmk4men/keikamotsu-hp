@@ -289,3 +289,73 @@ h1, h2, h3, h4, p, li, td, th, span, a {
    =========================== */
 .revealed .stagger-card:nth-child(7) { transition-delay: 0.6s; }
 .revealed .stagger-card:nth-child(8) { transition-delay: 0.7s; }
+
+/* ===========================
+   吹き出し（先輩ドライバーの声）
+   =========================== */
+.speech-bubble {
+  position: relative;
+}
+/* 三角: 左から来る吹き出しは左下に */
+.speech-bubble.slide-from-left::before {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 28px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 11px solid #e5e7eb;
+}
+.speech-bubble.slide-from-left::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 29px;
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 10px solid white;
+}
+/* 三角: 右から来る吹き出しは右下に */
+.speech-bubble.slide-from-right::before {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  right: 28px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 11px solid #e5e7eb;
+}
+.speech-bubble.slide-from-right::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  right: 29px;
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 10px solid white;
+}
+
+/* 左右スライドイン */
+.slide-from-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.slide-from-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.revealed .slide-from-left,
+.revealed .slide-from-right {
+  opacity: 1;
+  transform: translateX(0);
+}
