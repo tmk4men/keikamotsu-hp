@@ -35,48 +35,48 @@ export default function DrivingTruck() {
           className="h-28 w-full md:h-32"
           fill="none"
         >
-          {/* 遠景ビル群（薄い） */}
-          <rect x="60"  y="40" width="28" height="80" fill="white" opacity="0.03" />
-          <rect x="95"  y="55" width="22" height="65" fill="white" opacity="0.025" />
-          <rect x="140" y="35" width="35" height="85" fill="white" opacity="0.03" />
-          <rect x="180" y="50" width="20" height="70" fill="white" opacity="0.02" />
-          <rect x="250" y="30" width="40" height="90" fill="white" opacity="0.035" />
-          <rect x="295" y="48" width="25" height="72" fill="white" opacity="0.025" />
-          <rect x="370" y="42" width="30" height="78" fill="white" opacity="0.03" />
-          <rect x="420" y="55" width="18" height="65" fill="white" opacity="0.02" />
-          <rect x="500" y="28" width="45" height="92" fill="white" opacity="0.035" />
-          <rect x="550" y="50" width="22" height="70" fill="white" opacity="0.025" />
-          <rect x="620" y="38" width="32" height="82" fill="white" opacity="0.03" />
-          <rect x="700" y="45" width="28" height="75" fill="white" opacity="0.025" />
-          <rect x="760" y="32" width="38" height="88" fill="white" opacity="0.03" />
-          <rect x="850" y="50" width="24" height="70" fill="white" opacity="0.02" />
-          <rect x="920" y="36" width="35" height="84" fill="white" opacity="0.035" />
-          <rect x="980" y="52" width="20" height="68" fill="white" opacity="0.025" />
-          <rect x="1040" y="40" width="30" height="80" fill="white" opacity="0.03" />
-          <rect x="1100" y="55" width="25" height="65" fill="white" opacity="0.02" />
+          {/* 遠景ビル群 */}
+          <rect x="60"  y="40" width="28" height="80" fill="white" opacity="0.1" />
+          <rect x="95"  y="55" width="22" height="65" fill="white" opacity="0.08" />
+          <rect x="140" y="35" width="35" height="85" fill="white" opacity="0.1" />
+          <rect x="180" y="50" width="20" height="70" fill="white" opacity="0.07" />
+          <rect x="250" y="30" width="40" height="90" fill="white" opacity="0.12" />
+          <rect x="295" y="48" width="25" height="72" fill="white" opacity="0.08" />
+          <rect x="370" y="42" width="30" height="78" fill="white" opacity="0.1" />
+          <rect x="420" y="55" width="18" height="65" fill="white" opacity="0.07" />
+          <rect x="500" y="28" width="45" height="92" fill="white" opacity="0.12" />
+          <rect x="550" y="50" width="22" height="70" fill="white" opacity="0.08" />
+          <rect x="620" y="38" width="32" height="82" fill="white" opacity="0.1" />
+          <rect x="700" y="45" width="28" height="75" fill="white" opacity="0.08" />
+          <rect x="760" y="32" width="38" height="88" fill="white" opacity="0.1" />
+          <rect x="850" y="50" width="24" height="70" fill="white" opacity="0.07" />
+          <rect x="920" y="36" width="35" height="84" fill="white" opacity="0.12" />
+          <rect x="980" y="52" width="20" height="68" fill="white" opacity="0.08" />
+          <rect x="1040" y="40" width="30" height="80" fill="white" opacity="0.1" />
+          <rect x="1100" y="55" width="25" height="65" fill="white" opacity="0.07" />
           {/* 近景ビル群（やや濃い） */}
-          <rect x="80"  y="60" width="24" height="60" fill="white" opacity="0.045" />
-          <rect x="160" y="55" width="30" height="65" fill="white" opacity="0.05" />
-          <rect x="270" y="58" width="20" height="62" fill="white" opacity="0.04" />
-          <rect x="400" y="52" width="35" height="68" fill="white" opacity="0.05" />
-          <rect x="530" y="60" width="26" height="60" fill="white" opacity="0.04" />
-          <rect x="660" y="54" width="32" height="66" fill="white" opacity="0.05" />
-          <rect x="800" y="58" width="22" height="62" fill="white" opacity="0.04" />
-          <rect x="950" y="52" width="28" height="68" fill="white" opacity="0.05" />
-          <rect x="1060" y="58" width="24" height="62" fill="white" opacity="0.04" />
+          <rect x="80"  y="60" width="24" height="60" fill="white" opacity="0.15" />
+          <rect x="160" y="55" width="30" height="65" fill="white" opacity="0.18" />
+          <rect x="270" y="58" width="20" height="62" fill="white" opacity="0.14" />
+          <rect x="400" y="52" width="35" height="68" fill="white" opacity="0.18" />
+          <rect x="530" y="60" width="26" height="60" fill="white" opacity="0.14" />
+          <rect x="660" y="54" width="32" height="66" fill="white" opacity="0.18" />
+          <rect x="800" y="58" width="22" height="62" fill="white" opacity="0.14" />
+          <rect x="950" y="52" width="28" height="68" fill="white" opacity="0.18" />
+          <rect x="1060" y="58" width="24" height="62" fill="white" opacity="0.14" />
           {/* ビル窓の光 */}
-          <rect x="65"  y="48" width="3" height="3" fill="white" opacity="0.06" />
-          <rect x="75"  y="55" width="3" height="3" fill="white" opacity="0.04" />
-          <rect x="148" y="42" width="3" height="3" fill="white" opacity="0.05" />
-          <rect x="155" y="52" width="3" height="3" fill="white" opacity="0.04" />
-          <rect x="258" y="38" width="3" height="3" fill="white" opacity="0.06" />
-          <rect x="265" y="48" width="3" height="3" fill="white" opacity="0.04" />
-          <rect x="507" y="36" width="3" height="3" fill="white" opacity="0.05" />
-          <rect x="520" y="45" width="3" height="3" fill="white" opacity="0.04" />
-          <rect x="768" y="40" width="3" height="3" fill="white" opacity="0.06" />
-          <rect x="780" y="50" width="3" height="3" fill="white" opacity="0.04" />
-          <rect x="928" y="42" width="3" height="3" fill="white" opacity="0.05" />
-          <rect x="940" y="52" width="3" height="3" fill="white" opacity="0.04" />
+          <rect x="65"  y="48" width="3" height="3" fill="#fde68a" opacity="0.25" />
+          <rect x="75"  y="55" width="3" height="3" fill="#fde68a" opacity="0.2" />
+          <rect x="148" y="42" width="3" height="3" fill="#fde68a" opacity="0.22" />
+          <rect x="155" y="52" width="3" height="3" fill="#fde68a" opacity="0.18" />
+          <rect x="258" y="38" width="3" height="3" fill="#fde68a" opacity="0.25" />
+          <rect x="265" y="48" width="3" height="3" fill="#fde68a" opacity="0.2" />
+          <rect x="507" y="36" width="3" height="3" fill="#fde68a" opacity="0.22" />
+          <rect x="520" y="45" width="3" height="3" fill="#fde68a" opacity="0.18" />
+          <rect x="768" y="40" width="3" height="3" fill="#fde68a" opacity="0.25" />
+          <rect x="780" y="50" width="3" height="3" fill="#fde68a" opacity="0.2" />
+          <rect x="928" y="42" width="3" height="3" fill="#fde68a" opacity="0.22" />
+          <rect x="940" y="52" width="3" height="3" fill="#fde68a" opacity="0.18" />
         </svg>
       </div>
 
