@@ -438,7 +438,7 @@ export default function Home() {
                   className={`speech-bubble rounded-xl border border-gray-200 bg-white p-6 ${
                     voice.from === "left" ? "slide-from-left" : "slide-from-right"
                   }`}
-                  style={{ transitionDelay: `${i * 0.15}s` }}
+                  style={{ transitionDelay: `${i * 0.35}s` }}
                 >
                   {/* プロフィール */}
                   <div className="mb-4 flex items-center gap-3">
@@ -456,7 +456,7 @@ export default function Home() {
                     </div>
                   </div>
                   {/* 体験談 */}
-                  <p className="text-[13px] leading-[1.8] text-gray-600">
+                  <p className="text-[13px] leading-[1.8] text-gray-600" style={{ wordBreak: "normal" }}>
                     {voice.text}
                   </p>
                   {/* ハイライト */}
