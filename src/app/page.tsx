@@ -368,7 +368,13 @@ export default function Home() {
                   desc: "荷物を届け終えたら、まっすぐ帰れる。残業はほとんどありません。",
                 },
               ].map((item, i) => (
-                <div key={item.time} className="stagger-card timeline-item relative flex gap-4 pb-8 last:pb-0">
+                <div
+                  key={item.time}
+                  className={`timeline-item relative flex gap-4 pb-8 last:pb-0 ${
+                    i % 2 === 0 ? "slide-from-left" : "slide-from-right"
+                  }`}
+                  style={{ transitionDelay: `${i * 0.2}s` }}
+                >
                   {/* タイムラインの線と丸 */}
                   <div className="flex flex-col items-center">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand text-xs font-bold text-white">
