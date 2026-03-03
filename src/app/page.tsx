@@ -571,7 +571,7 @@ export default function Home() {
       >
         <ScrollReveal>
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-xl font-extrabold text-gray-900 md:text-2xl">
+            <h2 className="font-[family-name:var(--font-handwriting)] text-2xl text-gray-900 md:text-3xl">
               <span className="heading-underline">「ちょっと話を聞いてみたい」<br />——それだけで大丈夫です。</span>
             </h2>
             <p className="mt-4 text-sm leading-[1.9] text-gray-500">
