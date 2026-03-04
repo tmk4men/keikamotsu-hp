@@ -62,8 +62,10 @@ const navLinks = [
   { href: "#benefits", label: "待遇・福利厚生" },
   { href: "#daily", label: "1日の流れ" },
   { href: "#voices", label: "先輩の声" },
-  { href: "#news", label: "お知らせ" },
+  { href: "#faq", label: "よくある質問" },
+  { href: "#gallery", label: "ギャラリー" },
   { href: "#company", label: "会社概要" },
+  { href: "#access", label: "アクセス" },
 ];
 
 export default function RootLayout({
