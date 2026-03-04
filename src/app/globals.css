@@ -395,6 +395,29 @@ h1, h2, h3, h4, p, li, td, th, span, a {
   transform: translateY(-2px);
 }
 
+/* 応募条件の下線アニメーション */
+@keyframes underline-grow {
+  from { width: 0; }
+  to { width: 100%; }
+}
+.condition-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+.revealed .condition-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #1e6e3e, #34d399);
+  border-radius: 1px;
+  animation: underline-grow 0.8s ease-out forwards;
+  animation-delay: inherit;
+}
+
 /* 左右スライドイン */
 .slide-from-left {
   opacity: 0;

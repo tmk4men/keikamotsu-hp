@@ -274,10 +274,10 @@ export default function Home() {
                       "未経験者歓迎",
                       "学歴不問",
                       "20代〜50代活躍中",
-                    ].map((r) => (
+                    ].map((r, i) => (
                       <li key={r} className="flex items-start gap-2">
                         <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
-                        {r}
+                        <span className="condition-underline" style={{ animationDelay: `${i * 0.3}s` }}>{r}</span>
                       </li>
                     ))}
                   </ul>
