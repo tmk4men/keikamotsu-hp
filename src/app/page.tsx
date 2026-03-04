@@ -19,7 +19,7 @@ export default function Home() {
         <div className="hero-particle left-[85%] top-[25%] h-3 w-3" style={{ "--dur": "9s", "--delay": "1s" } as React.CSSProperties} />
 
         <div className="relative z-10 mx-auto flex min-h-[calc(100svh-56px)] max-w-5xl flex-col justify-center px-6 py-10 md:py-14">
-          <h1 className="hero-gradient-text text-[2rem] leading-[1.4] font-extrabold md:text-[3rem] md:leading-[1.35]">
+          <h1 className="font-heading hero-gradient-text text-[2rem] leading-[1.4] font-extrabold md:text-[3rem] md:leading-[1.35]">
             運転が好き。
             <br />
             それだけで始められる
@@ -115,13 +115,33 @@ export default function Home() {
       <section id="reasons" className="section-grad-green px-5 pt-20 pb-16 md:pt-28 md:pb-24">
         <ScrollReveal>
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-3 flex items-center gap-2 text-xl font-extrabold text-gray-900">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-gray-400"><path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clipRule="evenodd" /></svg>
-              <span className="heading-underline">選ばれる3つの理由</span>
-            </h2>
-            <p className="mb-10 text-sm text-gray-400">
-              「ここで始めてよかった」——そう思える理由があります。
-            </p>
+            {/* 背景画像付きヘッダー（上下フェードアウト） */}
+            <div className="relative mb-10 overflow-hidden rounded-2xl">
+              <Image
+                src="/keikamotsu-hp/images/reasons.webp"
+                alt="選ばれる理由のイメージ"
+                width={1104}
+                height={824}
+                className="w-full object-cover"
+                style={{ minHeight: "200px", maxHeight: "280px" }}
+                priority={false}
+              />
+              {/* 上フェードアウト */}
+              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#f2f9f5] to-transparent" />
+              {/* 下フェードアウト */}
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#f2f9f5] to-transparent" />
+              {/* テキストオーバーレイ */}
+              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                <h2 className="font-heading mb-2 flex items-center gap-2 text-xl font-extrabold text-white drop-shadow-lg">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-white/70"><path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clipRule="evenodd" /></svg>
+                  <span>選ばれる3つの理由</span>
+                </h2>
+                <p className="text-sm text-white/80 drop-shadow">
+                  「ここで始めてよかった」——そう思える理由があります。
+                </p>
+              </div>
+            </div>
 
             <div className="grid gap-6 sm:grid-cols-3">
               {[
@@ -172,19 +192,39 @@ export default function Home() {
       <section id="jobs" className="section-grad-warm px-5 pt-20 pb-16 md:pt-28 md:pb-24">
         <ScrollReveal>
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-2 flex items-center gap-2 text-xl font-extrabold text-gray-900">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-gray-400"><path fillRule="evenodd" d="M7.5 5.25a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0 1 12 15.75a24.726 24.726 0 0 1-7.814-1.259c-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 0 1 7.5 5.455V5.25Zm7.5 0v.09a49.488 49.488 0 0 0-6 0v-.09a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5Zm-3 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" /><path d="M3 18.4v-2.796a4.3 4.3 0 0 0 .713.31A26.226 26.226 0 0 0 12 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 0 1-6.477-.427C4.047 21.128 3 19.852 3 18.4Z" /></svg>
-              <span className="heading-underline">求人情報</span>
-            </h2>
-            <p className="mb-10 text-sm text-gray-400">
-              あなたに合う働き方、見つかります。
-              <wbr />
-              正社員として安定を求めるもよし、
-              <wbr />
-              業務委託で自由に働くもよし。
-              <wbr />
-              どちらも全力でサポートします。
-            </p>
+            {/* 背景画像付きヘッダー（上下フェードアウト） */}
+            <div className="relative mb-10 overflow-hidden rounded-2xl">
+              <Image
+                src="/keikamotsu-hp/images/jobs.webp"
+                alt="軽貨物ドライバーの求人イメージ"
+                width={1104}
+                height={824}
+                className="w-full object-cover"
+                style={{ minHeight: "200px", maxHeight: "280px" }}
+                priority={false}
+              />
+              {/* 上フェードアウト */}
+              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#faf9f7] to-transparent" />
+              {/* 下フェードアウト */}
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#faf9f7] to-transparent" />
+              {/* テキストオーバーレイ */}
+              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                <h2 className="font-heading mb-2 flex items-center gap-2 text-xl font-extrabold text-white drop-shadow-lg">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-white/70"><path fillRule="evenodd" d="M7.5 5.25a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0 1 12 15.75a24.726 24.726 0 0 1-7.814-1.259c-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 0 1 7.5 5.455V5.25Zm7.5 0v.09a49.488 49.488 0 0 0-6 0v-.09a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5Zm-3 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" /><path d="M3 18.4v-2.796a4.3 4.3 0 0 0 .713.31A26.226 26.226 0 0 0 12 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 0 1-6.477-.427C4.047 21.128 3 19.852 3 18.4Z" /></svg>
+                  <span>求人情報</span>
+                </h2>
+                <p className="text-sm text-white/80 drop-shadow">
+                  あなたに合う働き方、見つかります。
+                  <wbr />
+                  正社員として安定を求めるもよし、
+                  <wbr />
+                  業務委託で自由に働くもよし。
+                  <wbr />
+                  どちらも全力でサポートします。
+                </p>
+              </div>
+            </div>
 
             <dl className="divide-y divide-gray-200 border-y border-gray-200">
               {[
@@ -252,17 +292,37 @@ export default function Home() {
       <section id="benefits" className="wave-divider wave-divider-bg section-grad-mint px-5 py-16 md:py-24">
         <ScrollReveal>
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-2 flex items-center gap-2 text-xl font-extrabold text-gray-900">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-gray-400"><path fillRule="evenodd" d="M12.516 2.17a.75.75 0 0 0-1.032 0 11.209 11.209 0 0 1-7.877 3.08.75.75 0 0 0-.722.515A12.74 12.74 0 0 0 2.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 0 0 .374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 0 0-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08Zm3.094 8.016a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" /></svg>
-              <span className="heading-underline">待遇・福利厚生</span>
-            </h2>
-            <p className="mb-10 text-sm text-gray-400">
-              「長く続けられるかな」——その不安に、制度で応えます。
-              <br />
-              保険も、車も、燃料費も。あなたが仕事だけに
-              <wbr />
-              集中できるように、バックアップ体制を整えました。
-            </p>
+            {/* 背景画像付きヘッダー（上下フェードアウト） */}
+            <div className="relative mb-10 overflow-hidden rounded-2xl">
+              <Image
+                src="/keikamotsu-hp/images/benefits.webp"
+                alt="待遇・福利厚生のイメージ"
+                width={1104}
+                height={824}
+                className="w-full object-cover"
+                style={{ minHeight: "200px", maxHeight: "280px" }}
+                priority={false}
+              />
+              {/* 上フェードアウト */}
+              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#eef8f3] to-transparent" />
+              {/* 下フェードアウト */}
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#eef8f3] to-transparent" />
+              {/* テキストオーバーレイ */}
+              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                <h2 className="font-heading mb-2 flex items-center gap-2 text-xl font-extrabold text-white drop-shadow-lg">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-white/70"><path fillRule="evenodd" d="M12.516 2.17a.75.75 0 0 0-1.032 0 11.209 11.209 0 0 1-7.877 3.08.75.75 0 0 0-.722.515A12.74 12.74 0 0 0 2.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 0 0 .374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 0 0-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08Zm3.094 8.016a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" /></svg>
+                  <span>待遇・福利厚生</span>
+                </h2>
+                <p className="text-sm text-white/80 drop-shadow">
+                  「長く続けられるかな」——その不安に、制度で応えます。
+                  <br />
+                  保険も、車も、燃料費も。あなたが仕事だけに
+                  <wbr />
+                  集中できるように、バックアップ体制を整えました。
+                </p>
+              </div>
+            </div>
 
             <div className="grid gap-3 sm:grid-cols-2">
               {[
@@ -316,26 +376,34 @@ export default function Home() {
       <section id="daily" className="section-grad-sunset px-5 pt-20 pb-16 md:pt-28 md:pb-24">
         <ScrollReveal>
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-2 flex items-center gap-2 text-xl font-extrabold text-gray-900">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-gray-400"><path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 0 0 0-1.5h-3.75V6Z" clipRule="evenodd" /></svg>
-              <span className="heading-underline">1日の流れ</span>
-            </h2>
-            <p className="mb-10 text-sm text-gray-400">
-              「実際どんな1日なの？」——働くイメージが湧くように、
-              <wbr />
-              ある日のスケジュールをご紹介します。
-            </p>
-
-            {/* 朝焼けの大阪空撮画像 */}
-            <div className="stagger-card mx-auto mb-10 max-w-md overflow-hidden rounded-xl">
+            {/* 背景画像付きヘッダー */}
+            <div className="relative mb-10 overflow-hidden rounded-2xl">
               <Image
-                src="/keikamotsu-hp/images/daily-flow.png"
+                src="/keikamotsu-hp/images/daily-flow.webp"
                 alt="朝焼けの大阪の街を走る軽バン"
                 width={1104}
                 height={824}
                 className="w-full object-cover"
+                style={{ minHeight: "200px", maxHeight: "280px" }}
                 priority={false}
               />
+              {/* 上フェードアウト */}
+              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#faf6f2] to-transparent" />
+              {/* 下フェードアウト */}
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#faf6f2] to-transparent" />
+              {/* テキストオーバーレイ */}
+              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                <h2 className="font-heading mb-2 flex items-center gap-2 text-xl font-extrabold text-white drop-shadow-lg">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-white/70"><path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 0 0 0-1.5h-3.75V6Z" clipRule="evenodd" /></svg>
+                  <span>1日の流れ</span>
+                </h2>
+                <p className="text-sm text-white/80 drop-shadow">
+                  「実際どんな1日なの？」——働くイメージが湧くように、
+                  <wbr />
+                  ある日のスケジュールをご紹介します。
+                </p>
+              </div>
             </div>
 
             <div className="timeline-container space-y-0">
@@ -405,13 +473,33 @@ export default function Home() {
       <section id="voices" className="section-grad-sky px-5 pt-20 pb-16 md:pt-28 md:pb-24">
         <ScrollReveal>
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-2 flex items-center gap-2 text-xl font-extrabold text-gray-900">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-gray-400"><path fillRule="evenodd" d="M4.848 2.771A49.144 49.144 0 0 1 12 2.25c2.43 0 4.817.178 7.152.52 1.978.29 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.68-3.348 3.97a48.901 48.901 0 0 1-3.476.383.39.39 0 0 0-.297.17l-2.755 4.133a.75.75 0 0 1-1.248 0l-2.755-4.133a.39.39 0 0 0-.297-.17 48.9 48.9 0 0 1-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97ZM6.025 7.5a.75.75 0 0 0 0 1.5h11.95a.75.75 0 0 0 0-1.5H6.025Zm.75 3.75a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z" clipRule="evenodd" /></svg>
-              <span className="heading-underline">先輩ドライバーの声</span>
-            </h2>
-            <p className="mb-10 text-sm text-gray-400">
-              実際に働いている仲間のリアルな声をご紹介します。
-            </p>
+            {/* 背景画像付きヘッダー（上下フェードアウト） */}
+            <div className="relative mb-10 overflow-hidden rounded-2xl">
+              <Image
+                src="/keikamotsu-hp/images/voices.webp"
+                alt="先輩ドライバーのイメージ"
+                width={1104}
+                height={824}
+                className="w-full object-cover"
+                style={{ minHeight: "200px", maxHeight: "280px" }}
+                priority={false}
+              />
+              {/* 上フェードアウト */}
+              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#f0f6fa] to-transparent" />
+              {/* 下フェードアウト */}
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#f0f6fa] to-transparent" />
+              {/* テキストオーバーレイ */}
+              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                <h2 className="font-heading mb-2 flex items-center gap-2 text-xl font-extrabold text-white drop-shadow-lg">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-white/70"><path fillRule="evenodd" d="M4.848 2.771A49.144 49.144 0 0 1 12 2.25c2.43 0 4.817.178 7.152.52 1.978.29 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.68-3.348 3.97a48.901 48.901 0 0 1-3.476.383.39.39 0 0 0-.297.17l-2.755 4.133a.75.75 0 0 1-1.248 0l-2.755-4.133a.39.39 0 0 0-.297-.17 48.9 48.9 0 0 1-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97ZM6.025 7.5a.75.75 0 0 0 0 1.5h11.95a.75.75 0 0 0 0-1.5H6.025Zm.75 3.75a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z" clipRule="evenodd" /></svg>
+                  <span>先輩ドライバーの声</span>
+                </h2>
+                <p className="text-sm text-white/80 drop-shadow">
+                  実際に働いている仲間のリアルな声をご紹介します。
+                </p>
+              </div>
+            </div>
 
             <div className="grid gap-6 sm:grid-cols-2">
               {[
@@ -481,15 +569,35 @@ export default function Home() {
       <section id="faq" className="section-grad-mint px-5 pt-20 pb-16 md:pt-28 md:pb-24">
         <ScrollReveal>
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-2 flex items-center gap-2 text-xl font-extrabold text-gray-900">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-gray-400"><path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm11.378-3.917c-.89-.777-2.366-.777-3.255 0a.75.75 0 0 1-.988-1.129c1.454-1.272 3.776-1.272 5.23 0 1.513 1.324 1.513 3.518 0 4.842a3.75 3.75 0 0 1-.837.552c-.676.328-1.028.774-1.028 1.152v.75a.75.75 0 0 1-1.5 0v-.75c0-1.279 1.06-2.107 1.875-2.502.182-.088.351-.199.503-.331.83-.727.83-1.857 0-2.584ZM12 18a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" /></svg>
-              <span className="heading-underline">よくある質問</span>
-            </h2>
-            <p className="mb-10 text-sm text-gray-400">
-              応募前に気になることをまとめました。
-              <wbr />
-              お気軽にお問い合わせください。
-            </p>
+            {/* 背景画像付きヘッダー（上下フェードアウト） */}
+            <div className="relative mb-10 overflow-hidden rounded-2xl">
+              <Image
+                src="/keikamotsu-hp/images/faq.webp"
+                alt="よくある質問のイメージ"
+                width={1104}
+                height={824}
+                className="w-full object-cover"
+                style={{ minHeight: "200px", maxHeight: "280px" }}
+                priority={false}
+              />
+              {/* 上フェードアウト */}
+              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#eef8f3] to-transparent" />
+              {/* 下フェードアウト */}
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#eef8f3] to-transparent" />
+              {/* テキストオーバーレイ */}
+              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                <h2 className="font-heading mb-2 flex items-center gap-2 text-xl font-extrabold text-white drop-shadow-lg">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-white/70"><path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm11.378-3.917c-.89-.777-2.366-.777-3.255 0a.75.75 0 0 1-.988-1.129c1.454-1.272 3.776-1.272 5.23 0 1.513 1.324 1.513 3.518 0 4.842a3.75 3.75 0 0 1-.837.552c-.676.328-1.028.774-1.028 1.152v.75a.75.75 0 0 1-1.5 0v-.75c0-1.279 1.06-2.107 1.875-2.502.182-.088.351-.199.503-.331.83-.727.83-1.857 0-2.584ZM12 18a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" /></svg>
+                  <span>よくある質問</span>
+                </h2>
+                <p className="text-sm text-white/80 drop-shadow">
+                  応募前に気になることをまとめました。
+                  <wbr />
+                  お気軽にお問い合わせください。
+                </p>
+              </div>
+            </div>
 
             <FAQAccordion />
           </div>
@@ -500,7 +608,7 @@ export default function Home() {
       <section id="gallery" className="section-grad-sunset px-5 pt-20 pb-16 md:pt-28 md:pb-24">
         <ScrollReveal>
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-2 flex items-center gap-2 text-xl font-extrabold text-gray-900">
+            <h2 className="font-heading mb-2 flex items-center gap-2 text-xl font-extrabold text-gray-900">
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-gray-400"><path fillRule="evenodd" d="M1.5 6a2.25 2.25 0 0 1 2.25-2.25h16.5A2.25 2.25 0 0 1 22.5 6v12a2.25 2.25 0 0 1-2.25 2.25H3.75A2.25 2.25 0 0 1 1.5 18V6ZM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0 0 21 18v-1.94l-2.69-2.689a1.5 1.5 0 0 0-2.12 0l-.88.879.97.97a.75.75 0 1 1-1.06 1.06l-5.16-5.159a1.5 1.5 0 0 0-2.12 0L3 16.061Zm10.125-7.81a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Z" clipRule="evenodd" /></svg>
               <span className="heading-underline">職場の雰囲気</span>
             </h2>
@@ -517,7 +625,7 @@ export default function Home() {
       <section id="news" className="section-grad-warm px-5 pt-20 pb-16 md:pt-28 md:pb-24">
         <ScrollReveal>
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-8 flex items-center gap-2 text-xl font-extrabold text-gray-900">
+            <h2 className="font-heading mb-8 flex items-center gap-2 text-xl font-extrabold text-gray-900">
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-gray-400"><path d="M5.85 3.5a.75.75 0 0 0-1.117-1 9.719 9.719 0 0 0-2.348 4.876.75.75 0 0 0 1.479.248A8.219 8.219 0 0 1 5.85 3.5ZM19.267 2.5a.75.75 0 1 0-1.118 1 8.22 8.22 0 0 1 1.987 4.124.75.75 0 0 0 1.48-.248A9.72 9.72 0 0 0 19.266 2.5Z" /><path fillRule="evenodd" d="M12 2.25A6.75 6.75 0 0 0 5.25 9v.75a8.217 8.217 0 0 1-2.119 5.52.75.75 0 0 0 .298 1.206c1.544.57 3.16.99 4.831 1.243a3.75 3.75 0 1 0 7.48 0 24.583 24.583 0 0 0 4.83-1.244.75.75 0 0 0 .298-1.205 8.217 8.217 0 0 1-2.118-5.52V9A6.75 6.75 0 0 0 12 2.25ZM9.75 18c0-.034 0-.067.002-.1a25.05 25.05 0 0 0 4.496 0l.002.1a2.25 2.25 0 1 1-4.5 0Z" clipRule="evenodd" /></svg>
               <span className="heading-underline">お知らせ</span>
             </h2>
@@ -574,10 +682,30 @@ export default function Home() {
       <section id="company" className="wave-divider wave-divider-pale section-grad-green px-5 py-16 md:py-24">
         <ScrollReveal>
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-8 flex items-center gap-2 text-xl font-extrabold text-gray-900">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-gray-400"><path fillRule="evenodd" d="M4.5 2.25a.75.75 0 0 0 0 1.5v16.5h-.75a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5h-.75V3.75a.75.75 0 0 0 0-1.5h-15ZM9 6a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H9Zm-.75 3.75A.75.75 0 0 1 9 9h1.5a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM9 12a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H9Zm3.75-5.25A.75.75 0 0 1 13.5 6H15a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75ZM13.5 9a.75.75 0 0 0 0 1.5H15a.75.75 0 0 0 0-1.5h-1.5Zm-.75 3.75a.75.75 0 0 1 .75-.75H15a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75ZM9 19.5v-2.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75v2.25H9Z" clipRule="evenodd" /></svg>
-              <span className="heading-underline">会社概要</span>
-            </h2>
+            {/* 背景画像付きヘッダー（上下フェードアウト） */}
+            <div className="relative mb-8 overflow-hidden rounded-2xl">
+              <Image
+                src="/keikamotsu-hp/images/company.webp"
+                alt="会社外観のイメージ"
+                width={1104}
+                height={824}
+                className="w-full object-cover"
+                style={{ minHeight: "200px", maxHeight: "280px" }}
+                priority={false}
+              />
+              {/* 上フェードアウト */}
+              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#f2f9f5] to-transparent" />
+              {/* 下フェードアウト */}
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#f2f9f5] to-transparent" />
+              {/* テキストオーバーレイ */}
+              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+                <h2 className="font-heading flex items-center gap-2 text-xl font-extrabold text-white drop-shadow-lg">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-white/70"><path fillRule="evenodd" d="M4.5 2.25a.75.75 0 0 0 0 1.5v16.5h-.75a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5h-.75V3.75a.75.75 0 0 0 0-1.5h-15ZM9 6a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H9Zm-.75 3.75A.75.75 0 0 1 9 9h1.5a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM9 12a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H9Zm3.75-5.25A.75.75 0 0 1 13.5 6H15a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75ZM13.5 9a.75.75 0 0 0 0 1.5H15a.75.75 0 0 0 0-1.5h-1.5Zm-.75 3.75a.75.75 0 0 1 .75-.75H15a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75ZM9 19.5v-2.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75v2.25H9Z" clipRule="evenodd" /></svg>
+                  <span>会社概要</span>
+                </h2>
+              </div>
+            </div>
 
             <dl className="divide-y divide-gray-200 border-y border-gray-200">
               {[
@@ -607,7 +735,7 @@ export default function Home() {
       <section id="access" className="section-grad-warm px-5 pt-20 pb-16 md:pt-28 md:pb-24">
         <ScrollReveal>
           <div className="mx-auto max-w-3xl">
-            <h2 className="mb-2 flex items-center gap-2 text-xl font-extrabold text-gray-900">
+            <h2 className="font-heading mb-2 flex items-center gap-2 text-xl font-extrabold text-gray-900">
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 text-gray-400"><path fillRule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 3.827 3.024ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clipRule="evenodd" /></svg>
               <span className="heading-underline">アクセス</span>
             </h2>

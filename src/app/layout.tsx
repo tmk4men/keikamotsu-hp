@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Zen_Kurenaido } from "next/font/google";
+import { Noto_Sans_JP, Zen_Kurenaido, Shippori_Mincho } from "next/font/google";
 import ScrollTruck from "@/components/ScrollTruck";
 import MobileNav from "@/components/MobileNav";
 import MobileCTA from "@/components/MobileCTA";
@@ -16,6 +16,13 @@ const zenKurenaido = Zen_Kurenaido({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-handwriting",
+  display: "swap",
+});
+
+const shipporiMincho = Shippori_Mincho({
+  weight: ["600", "700"],
+  subsets: ["latin"],
+  variable: "--font-heading",
   display: "swap",
 });
 
@@ -74,7 +81,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja" className={`${notoSansJP.variable} ${zenKurenaido.variable}`}>
+    <html lang="ja" className={`${notoSansJP.variable} ${zenKurenaido.variable} ${shipporiMincho.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -179,7 +186,7 @@ export default function RootLayout({
 
         {/* 背景画像 — 画面下に固定、フッターの裏に隠れている */}
         <div className="fixed bottom-0 left-0 right-0 -z-10 h-[60vh] md:h-[70vh]">
-          <div className="absolute inset-0 bg-[url('/keikamotsu-hp/images/footer-bg.png')] bg-cover bg-center" />
+          <div className="absolute inset-0 bg-[url('/keikamotsu-hp/images/footer-bg.webp')] bg-cover bg-center" />
           <div className="absolute inset-0 bg-black/30" />
           <p className="absolute inset-0 flex items-center justify-center font-[family-name:var(--font-handwriting)] text-2xl tracking-widest text-white/80 md:text-4xl">
             あなたの道は、ここから始まる。
