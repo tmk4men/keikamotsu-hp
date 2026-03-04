@@ -3,6 +3,7 @@ import { Noto_Sans_JP, Zen_Kurenaido, Shippori_Mincho } from "next/font/google";
 import ScrollTruck from "@/components/ScrollTruck";
 import MobileNav from "@/components/MobileNav";
 import MobileCTA from "@/components/MobileCTA";
+import TypingText from "@/components/TypingText";
 import { navIcons } from "@/components/NavIcons";
 import "./globals.css";
 
@@ -189,7 +190,7 @@ export default function RootLayout({
           <div className="absolute inset-0 bg-[url('/keikamotsu-hp/images/footer-bg.webp')] bg-cover bg-center" />
           <div className="absolute inset-0 bg-black/30" />
           <p className="absolute inset-0 flex items-center justify-center font-[family-name:var(--font-handwriting)] text-2xl tracking-widest text-white/80 md:text-4xl">
-            あなたの道は、ここから始まる。
+            <TypingText text="あなたの道は、ここから始まる。" />
           </p>
         </div>
 
